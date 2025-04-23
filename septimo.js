@@ -44,43 +44,30 @@ carro = carros.unshift({
  // 4. Con el nuevo arreglo que obtuviste en el ejercicio 3  crear una funcion que me devuelva 
  // y muestre en consola el numero de carros modelo 2020
 
- function modelo(arreglo){
- let contador = 0;
- for (let carros of arreglo){
-    if (carros.modelo === 2020){
-        contador++;
-    } 
+ function modelo(arreglo) {
+    let contador = 0;
+    for (let carros of arreglo) {
+        if (carros.modelo === 2020) {
+            contador++;
+        } 
+    }
+    console.log(`Número de modelos de carros: ${contador}`);
+    return contador;
 }
-console.log("numero de modelos de carros: " + contador);
-return contador;
- }
- modelo(carros);
+
+modelo(carros);
+
  // 5. Dado una arreglo de nombres ["argentina","bolivia","colombia"] realizar un funcion callbak para
  // pasar el arreglo de minisculas a mayusculas.
-
- let paisA = "bolivia" 
- {
-  let  dept1 = "la paz";
-  let  dept2 = "oruro";
- }
- console.log(paisA)
-
- let paisB = "Argentina"
-{
-    let depto1 = "Buenos Aires";
-    let depto2 = "Rosario";
-   
+let paises = ["argentina", "bolivia", "colombia"];
+function cambiarMayus(arreglo, callback) {
+    return arreglo.map(callback);
 }
-console.log(paisB);
-
-let paisC = "colombia"
-{
-    let ciudad1 = "guayaquil";
-    let ciudad2 = "sinaloa";
+function Mayusculas(pais) {
+    return pais.toUpperCase();
 }
-console.log(paisC);
+let paisesM = cambiarMayus(paises, Mayusculas);
 
-function mayuscula(nombre){
-    return nombre.toUpperCase();
-}
+console.log(paisesM);
+
 
